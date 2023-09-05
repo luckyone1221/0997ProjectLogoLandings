@@ -1,0 +1,21 @@
+mixin mnu()
+	nav
+		ul.menu
+			li.menu-item: a(href="/") Про нас
+			li.menu-item: a(href="/") 1
+			li.menu-item: a(href="/") 2
+
+
+mixin mnuOld()
+	nav
+		ul.menu
+			each link in nav
+				li.menu-item: a(href= link.url)= link.name
+				if link.subnav
+					li.menu-item.menu-item-has-children
+						a(href="#") Про нас
+						ul.sub-menu
+							each sublink in link.subnav
+								li.menu-item: a(href=sublink.url)=sublink.name
+
+//- menu

@@ -1,0 +1,25 @@
+mixin menu-toggle()
+	+b.toggle-menu-mobile--js.d-lg-none
+		span
+
+mixin mob-mnu()
+	+b.menu-mobile--js
+		+b.toggle-menu-mobile--js
+			span
+		+e.inner
+			+mnu()
+
+mixin top-nav() 
+	// start top-nav
+	+b.top-nav.block-with-lazy
+		.container
+			.row
+				.col.order-lg-0.order-last
+					.menu-mobile.menu-mobile--js
+						.menu-mobile__inner
+							+menu-toggle()
+							+mnu()
+					
+				.col-auto.d-lg-none
+					+menu-toggle()
+	// end top-nav

@@ -1,0 +1,19 @@
+// start .header
+.header {
+	position: fixed;
+	z-index: 10;
+	top: 0;
+	left: 0;
+	width: 100vw;
+
+	border-bottom: 1px solid transparent;
+	&.fixed{
+		border-bottom: 1px solid $gray-300;
+		box-shadow: 0 0 15px -5px rgba($black, .2);
+		background-color: $white;
+	}
+
+	&__{}
+	&__{}
+	&__{}
+} // end.header
