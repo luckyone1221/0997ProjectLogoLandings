@@ -1,48 +1,63 @@
+.sContact {
+	background: $light;
 
-	// start .sContact
-	.sContact {
-	// --sPT: #{rem()};
-	// --sPB: #{rem()};
-	// --sTPB: #{rem()};
+	@include media-breakpoint-up(xl){
+		--sPB: #{rem(64)};
+	}
 	&__row{
-		// --bs-gutter-x: #{rem()};
-		--bs-gutter-y: var(--bs-gutter-x);
-
+		--bs-gutter-x: #{rem(32)};
+		@include media-breakpoint-up(xxl){
+			--bs-gutter-x: #{rem(64)};
+		}
+		--bs-gutter-y: #{rem(32)};
 	}
 	.section-title{
-		
-	}
-	&__col{
-
+		p{
+			color: $gray;
+			font-size: rem(20);
+		}
 	}
 	&__item{
+		margin-bottom: rem(24);
+		@include media-breakpoint-up(lg){
+			margin-bottom: rem(32);
+		}
+		@include media-breakpoint-up(xl){
+			margin-bottom: rem(48);
+		}
 
+		&:last-child{
+			margin-bottom: 0;
+		}
 	}
-	&__slide{
-		height: auto;
+	&__i-row{
+		--bs-gutter-x: #{rem(16)};
 	}
-	@include media-breakpoint-up(xl) {}
-	@include media-breakpoint-up(lg) {}
-	@include media-breakpoint-up(md) {}
-	@include media-breakpoint-up(sm) {}
-	@include media-breakpoint-up(xs) {}
-	
-	//
-	@include media-breakpoint-between(md, xl) { }
-	
-	
-	//
-	@include media-breakpoint-only(xs) {}
-	@include media-breakpoint-only(sm) {}
-	@include media-breakpoint-only(md) {}
-	@include media-breakpoint-only(lg) {}
-	@include media-breakpoint-only(xl) {}
-	
-	//
-	@include media-breakpoint-down(xl) {}
-	@include media-breakpoint-down(lg) {}
-	@include media-breakpoint-down(md) {}
-	@include media-breakpoint-down(sm) {}
-	@include media-breakpoint-down(xs) {} 
-
+	&__icon{
+		@include media-breakpoint-up(sm){
+			margin-top: rem(2);
+		}
+		width: rem(24);
+		height: rem(24);
+		path{
+			stroke: $secondary!important;
+		}
+	}
+	&__title{
+		color: $dark;
+		font-size: rem(20);
+		font-weight: 500;
+		margin-bottom: rem(8);
+	}
+	&__descr{
+		color: $gray;
+	}
+	a.sContact__descr{
+		&:hover{
+			color: $primary;
+		}
+	}
+	//-
+	&__{}
+	&__{}
 } // end.sContact

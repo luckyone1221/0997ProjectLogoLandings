@@ -87,7 +87,7 @@ const JSCCommon = {
 		}, { passive: true });
 
 		window.addEventListener('resize', () => {
-			if (window.matchMedia("(min-width: 992px)").matches) this.closeMenu();
+			if (window.matchMedia("(min-width: 576px)").matches) this.closeMenu();
 		}, { passive: true });
 	},
 
@@ -206,19 +206,6 @@ const JSCCommon = {
 			document.documentElement.style.setProperty('--vh', `${vh}px`);
 		}, { passive: true });
 	},
-	animateScroll() {
-		$(document).on('click', " .menu li a, .scroll-link", function () {
-			const elementClick = $(this).attr("href");
-			if (!document.querySelector(elementClick)) {
-				$(this).attr("href", '/' + elementClick)
-			}
-			else {
-				let destination = $(elementClick).offset().top;
-				$('html, body').animate({ scrollTop: destination - 80 }, 0);
-				return false;
-			}
-		});
-	},
 	getCurrentYear(el) {
 		let now = new Date();
 		let currentYear = document.querySelector(el);
@@ -307,6 +294,7 @@ function eventHandler() {
 	// JSCCommon.sendForm();
 	JSCCommon.heightwindow();
 	JSCCommon.makeDDGroup();
+	JSCCommon.imgToSVG();
 	// JSCCommon.toggleShow(".catalog-block__toggle--desctop", '.catalog-block__dropdown');
 	// JSCCommon.animateScroll();
 	
@@ -318,28 +306,47 @@ function eventHandler() {
 		document.body.insertAdjacentHTML("beforeend", `<div class="pixel-perfect" style="background-image: url(${screenName});"></div>`);
 	}
 
-
+	//
+	let header = document.querySelector(".header--js");
+	function calcHeaderHeight() {
+		document.documentElement.style.setProperty('--header-h', `${header.offsetHeight}px`);
+		window.setTimeout(() => {document.documentElement.style.setProperty('--header-height', `${header.offsetHeight}px`);}, 10);
+		window.setTimeout(() => {document.documentElement.style.setProperty('--header-height', `${header.offsetHeight}px`);}, 100);
+	}
 	function setFixedNav() {
-		let topNav = document.querySelector('.top-nav  ');
-		if (!topNav) return;
 		window.scrollY > 0
-			? topNav.classList.add('fixed')
-			: topNav.classList.remove('fixed');
+			? header.classList.add('fixed')
+			: header.classList.remove('fixed');
 	}
 
-	function whenResize() {
+	if (header){
+		window.addEventListener('resize', calcHeaderHeight, {passive: true});
+		window.addEventListener('scroll', calcHeaderHeight, {passive: true});
+		calcHeaderHeight();
+
+		window.addEventListener('scroll', setFixedNav, { passive: true });
+		window.addEventListener('resize', setFixedNav, { passive: true });
 		setFixedNav();
 	}
+	//smooth scroll considering --header-h
+	document.addEventListener('click', function () {
+		if (event.target.closest('.menu, .anchor-js')){
+			JSCCommon.closeMenu();
+			try{
+				let scrollToElement = document.querySelector(event.target.getAttribute('href'));
 
-	window.addEventListener('scroll', () => {
-		setFixedNav();
+				window.scrollTo({
+					top: scrollToElement.offsetTop - header.offsetHeight,
+					behavior: "smooth",
+				});
 
-	}, { passive: true })
-	window.addEventListener('resize', () => {
-		whenResize();
-	}, { passive: true });
+				event.preventDefault();
+			}
+			catch (e){
 
-	whenResize();
+			}
+		}
+	})
 
 
 	let defaultSl = {
@@ -380,6 +387,11 @@ function eventHandler() {
 		freeModeMomentum: true,
 
 	});
+
+	let currYears = document.querySelectorAll('.curr-year-js');
+	for(let year of currYears){
+		year.innerHTML =  new Date().getFullYear();
+	}
 
 	// modal window
 

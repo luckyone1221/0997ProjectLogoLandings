@@ -1,0 +1,43 @@
+// start .sServices
+.sServices {
+	// --sPT: #{rem(0)};
+	// --sPB: #{rem(0)};
+	// --sTPB: #{rem(0)};
+
+	.section-title{
+		max-width: 768px;
+		margin-left: auto;
+		margin-right: auto;
+
+		p{
+			color: $gray;
+			font-size: rem(20);
+		}
+	}
+	&__row{
+		--bs-gutter-y: #{rem(24)};
+		@include media-breakpoint-up(sm){
+			--bs-gutter-y: #{rem(32)};
+		}
+		--bs-gutter-x: #{rem(32)};
+		@include media-breakpoint-up(xl){
+			--bs-gutter-x: #{rem(60)};
+			--bs-gutter-y: #{rem(32)};
+		}
+		@include media-breakpoint-up(xxl){
+			--bs-gutter-x: #{rem(88)};
+			--bs-gutter-y: #{rem(40)};
+		}
+	}
+	&__title{
+		color: $dark;
+		font-size: rem(20);
+		font-weight: 500;
+		margin-bottom: rem(8);
+	}
+	&__descr{
+		color: $gray;
+	}
+	&__{}
+	&__{}
+} // end.sServices

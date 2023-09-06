@@ -1,13 +1,15 @@
 mixin sForm()
 	// start sForm
-	+b.SECTION.sForm.section#sForm&attributes(attributes)
+	+b.sForm.section#sForm&attributes(attributes)
+		+e.box-bg.d-none.d-sm-block
+			img(loading="lazy" src="img/@2x/ContactSample.png" alt="")
 		.container
-			+b.section-title.text-center
-				h2 sForm
-				
-			+e.row.row
-			+form-wrap
-				+input("",'')
-				+input("",'')
-				+input("",'')
+			+form-wrap()
+				.section-title
+					+e.headline Contact US
+					+e.descr Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio
+				+e.inputs
+					+input('Name', 'text', undefined, 'name')
+					+input('E-mail', 'email', undefined, 'email')
+				+e.btn(type="submit") Get in Touch
 	// end sForm

@@ -1,15 +1,17 @@
 // start .header
 .header {
+	transition: box-shadow .3s ease-in-out, border-color .3s ease-in-out;
 	position: fixed;
-	z-index: 10;
+	z-index: 999;
 	top: 0;
 	left: 0;
 	width: 100vw;
 
-	border-bottom: 1px solid transparent;
+	border-bottom: 1px solid #F2F4F7;
+	background-color: $white;
 	&.fixed{
-		border-bottom: 1px solid $gray-300;
-		box-shadow: 0 0 15px -5px rgba($black, .2);
+		border-bottom: 1px solid darken(#F2F4F7, 2);
+		box-shadow: 0 0 18px -5px rgba($black, .15);
 		background-color: $white;
 	}
 

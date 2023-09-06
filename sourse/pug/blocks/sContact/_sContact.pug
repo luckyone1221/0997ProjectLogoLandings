@@ -1,9 +1,28 @@
 mixin sContact()
 	// start sContact
-	+b.SECTION.sContact.section#sContact&attributes(attributes)
+	+b.SECTION.sContact.section#Contact&attributes(attributes)
 		.container
-			+b.section-title.text-center
-				h2 sContact
-				
-			+e.row.row
+			+e.row.row.align-items-center
+				.col-lg-6
+					+b.section-title
+						h2.headline Contact us
+						+e.title Chat to our friendly team
+						p We’d love to hear from you! Please get in touch.
+				.col-lg-6
+					+sContactItem('location', 'Melbourne', '100 Flinders Street, Melbourne VIC 3000 AU')
+					+sContactItem('phone', 'Mobile Number', '+380973191609', 'tel:+380973191609')
 	// end sContact
+
+
+mixin sContactItem(iconName, title, descr, href)
+	+e.item
+		+e.i-row.row
+			.col-auto
+				+e.icon
+					img.img-svg-js(src=`img/svg/${iconName}.svg`)
+			.col
+				+e.title=title
+				if href
+					+e.descr(href=href)=descr
+				else
+					+e.descr=descr

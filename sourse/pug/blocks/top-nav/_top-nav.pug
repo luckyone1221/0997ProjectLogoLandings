@@ -3,23 +3,23 @@ mixin menu-toggle()
 		span
 
 mixin mob-mnu()
-	+b.menu-mobile--js
-		+b.toggle-menu-mobile--js
-			span
+	+b.menu-mobile--js.d-sm-none
 		+e.inner
 			+mnu()
+			+e.btn(href="#") Contact Us
 
 mixin top-nav() 
 	// start top-nav
 	+b.top-nav.block-with-lazy
 		.container
-			.row
-				.col.order-lg-0.order-last
-					.menu-mobile.menu-mobile--js
-						.menu-mobile__inner
-							+menu-toggle()
-							+mnu()
-					
-				.col-auto.d-lg-none
+			+e.row.row.align-items-center
+				.col.col-sm-auto
+					+e.logo(href="/")
+						img(src="img/@2x/logo.png" alt="")
+				.col.d-none.d-sm-block
+					+mnu()
+				.col-auto.d-none.d-sm-block
+					+e.btn.anchor-js(href="#Contact") Contact Us
+				.col-auto.d-sm-none
 					+menu-toggle()
 	// end top-nav

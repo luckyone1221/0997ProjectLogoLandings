@@ -1,0 +1,19 @@
+mixin sServices(data)
+	// start sServices
+	+b.SECTION.sServices.section#Services&attributes(attributes)
+		.container
+			+b.section-title.text-center
+				h2.headline Our Services
+				+e.title We’re here every step of the way
+				p We pride ourselves on our ability to challenge core assumptions, unpick legacy behaviors, streamline complex processes, and strike a balance between great design and functional development.
+			+e.row.row
+				+sServicesItem('Connect with customers', 'Solve a problem or close a sale in real-time with chat. If no one is available, customers are seamlessly routed to email without confusion.')
+				+sServicesItem('Connect the tools you already use', 'Explore 100+ integrations that make your day-to-day workflow more efficient and familiar. Plus, our extensive developer tools.')
+				+sServicesItem('Our people make the difference', 'We’re an extension of your customer service team, and all of our resources are free. Chat to our friendly team 24/7 when you need help.')
+				+sServicesItem('Our people make the difference', 'We’re an extension of your customer service team, and all of our resources are free. Chat to our friendly team 24/7 when you need help.')
+	// end sServices
+
+mixin sServicesItem(title, descr)
+	.col-md-6
+		+e.title=title
+		+e.descr=descr

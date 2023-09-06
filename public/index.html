@@ -1,12 +1,14 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="uk">
 	<head>
 		<meta charset="utf-8">
 		<title>тест dffsdf dfsdтест 2222</title>
-		<meta name="description" content="о чем страница">
+		<meta name="description" content="Про що сторінка">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width,initial-scale=1.0,  shrink-to-fit=no">
-		<link type="image/ico" href="img/favicon.ico" rel="shortcut icon"><meta name="format-detection" content="telephone=no"> 
+		<link type="image/ico" href="img/favicon.ico" rel="shortcut icon"><meta name="format-detection" content="telephone=no"> <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
 		<link href="libs/swiper/swiper-bundle.min.css" rel="stylesheet"/>
 		<link href="libs/@fancyapps/ui/fancybox.css" rel="stylesheet"/>
 		<link href="css/main.min.css" rel="stylesheet"/>
@@ -14,29 +16,30 @@
 	<body class="main-page">
 		<div class="main-wrapper">
 			<!-- start header-->
-			<header class="header" id="header">
+			<header class="header header--js" id="header">
 				<!-- start top-nav-->
 				<div class="top-nav block-with-lazy">
 					<div class="container">
-						<div class="row">
-							<div class="col order-lg-0 order-last">
-								<div class="menu-mobile menu-mobile--js">
-									<div class="menu-mobile__inner">
-										<div class="toggle-menu-mobile toggle-menu-mobile--js d-lg-none"><span></span>
-										</div>
-										<nav>
-											<ul class="menu" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
-												<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Наши работы</a></li>
-												<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Цены</a></li>
-												<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Калькулятор</a></li>
-												<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Акции</a></li>
-												<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Заказать</a></li>
-											</ul>
-										</nav>
-									</div>
-								</div>
+						<div class="top-nav__row row align-items-center">
+							<div class="col col-sm-auto">
+								<a class="top-nav__logo" href="/"><img src="img/@2x/logo.png" alt=""/>
+								</a>
 							</div>
-							<div class="col-auto d-lg-none">
+							<div class="col d-none d-sm-block">
+								<nav>
+									<ul class="menu">
+										<li class="menu-item"><a href="#Home">Home</a></li>
+										<li class="menu-item"><a href="#Services">Services</a></li>
+										<li class="menu-item"><a href="#About">About</a></li>
+										<li class="menu-item"><a href="#Contact">Contact Us</a></li>
+									</ul>
+								</nav>
+							</div>
+							<div class="col-auto d-none d-sm-block">
+								<a class="top-nav__btn anchor-js" href="#Contact">Contact Us
+								</a>
+							</div>
+							<div class="col-auto d-sm-none">
 								<div class="toggle-menu-mobile toggle-menu-mobile--js d-lg-none"><span></span>
 								</div>
 							</div>
@@ -44,265 +47,189 @@
 					</div>
 				</div>
 				<!-- end top-nav-->
-				<!-- start topLine-->
-				<div class="topLine section" id="topLine">
-					<div class="container">
-						<div class="section-title text-center">
-							<h2>topLine</h2>
-						</div>
-						<div class="row"></div>
-					</div>
-				</div>
-				<!-- end topLine-->
 			</header>
 			<!-- end header-->
+			<div class="menu-mobile menu-mobile--js d-sm-none">
+				<div class="menu-mobile__inner">
+					<nav>
+						<ul class="menu">
+							<li class="menu-item"><a href="#Home">Home</a></li>
+							<li class="menu-item"><a href="#Services">Services</a></li>
+							<li class="menu-item"><a href="#About">About</a></li>
+							<li class="menu-item"><a href="#Contact">Contact Us</a></li>
+						</ul>
+					</nav>
+					<a class="menu-mobile__btn" href="#">Contact Us
+					</a>
+				</div>
+			</div>
 			<main>
 				<!-- start headerBlock-->
-				<div class="headerBlock section" id="headerBlock">
+				<section class="headerBlock section" id="Home">
 					<div class="container">
 						<div class="section-title text-center">
-							<h2>headerBlock ds dfsdfdsfsd</h2>
-						</div>
-						<div class="row"></div>
-					</div>
-				</div>
-				<!-- end headerBlock-->
-				<!-- start sCatalog-->
-				<div class="sCatalog section">
-					<div class="container">
-						<div class="section-title text-center">
-							<h2>sCatalog</h2>
-							<p>Выкупаем проблемные автомобили в день обращения</p>
-						</div>
-						<div class="sCatalog__row row">
-							<div class="sCatalog__col col-3">
-								<article class="product-item">
-									<a class="product-item__img-wrap" href="#">
-										<div class="img-wrap-center"> <img src="img/prod-1.jpg" alt="" loading="lazy"/>
-										</div>
-									</a>
-									<div class="product-item__caption">
-										<div class="product-item__title">
-										</div>
-										<div class="product-item__text">
-										</div>
-										<div class="product-item__price">
-										</div>
-										<a class="product-item__btn" href="#">
-										</a>
-									</div>
-								</article>
-								<!-- /.product-item-->
-							</div>
-							<div class="sCatalog__col col-3">
-								<article class="product-item">
-									<a class="product-item__img-wrap" href="#">
-										<div class="img-wrap-center"> <img src="img/prod-2.jpg" alt="" loading="lazy"/>
-										</div>
-									</a>
-									<div class="product-item__caption">
-										<div class="product-item__title">
-										</div>
-										<div class="product-item__text">
-										</div>
-										<div class="product-item__price">
-										</div>
-										<a class="product-item__btn" href="#">
-										</a>
-									</div>
-								</article>
-								<!-- /.product-item-->
-							</div>
-							<div class="sCatalog__col col-3">
-								<article class="product-item">
-									<a class="product-item__img-wrap" href="#">
-										<div class="img-wrap-center"> <img src="img/prod-3.jpg" alt="" loading="lazy"/>
-										</div>
-									</a>
-									<div class="product-item__caption">
-										<div class="product-item__title">
-										</div>
-										<div class="product-item__text">
-										</div>
-										<div class="product-item__price">
-										</div>
-										<a class="product-item__btn" href="#">
-										</a>
-									</div>
-								</article>
-								<!-- /.product-item-->
-							</div>
-							<div class="sCatalog__col col-3">
-								<article class="product-item">
-									<a class="product-item__img-wrap" href="#">
-										<div class="img-wrap-center"> <img src="img/prod-4.jpg" alt="" loading="lazy"/>
-										</div>
-									</a>
-									<div class="product-item__caption">
-										<div class="product-item__title">
-										</div>
-										<div class="product-item__text">
-										</div>
-										<div class="product-item__price">
-										</div>
-										<a class="product-item__btn" href="#">
-										</a>
-									</div>
-								</article>
-								<!-- /.product-item-->
-							</div>
-							<div class="sCatalog__col col-3">
-								<article class="product-item">
-									<a class="product-item__img-wrap" href="#">
-										<div class="img-wrap-center"> <img src="img/prod-5.jpg" alt="" loading="lazy"/>
-										</div>
-									</a>
-									<div class="product-item__caption">
-										<div class="product-item__title">
-										</div>
-										<div class="product-item__text">
-										</div>
-										<div class="product-item__price">
-										</div>
-										<a class="product-item__btn" href="#">
-										</a>
-									</div>
-								</article>
-								<!-- /.product-item-->
-							</div>
-							<div class="sCatalog__col col-3">
-								<article class="product-item">
-									<a class="product-item__img-wrap" href="#">
-										<div class="img-wrap-center"> <img src="img/prod-6.jpg" alt="" loading="lazy"/>
-										</div>
-									</a>
-									<div class="product-item__caption">
-										<div class="product-item__title">
-										</div>
-										<div class="product-item__text">
-										</div>
-										<div class="product-item__price">
-										</div>
-										<a class="product-item__btn" href="#">
-										</a>
-									</div>
-								</article>
-								<!-- /.product-item-->
-							</div>
-							<div class="sCatalog__col col-3">
-								<article class="product-item">
-									<a class="product-item__img-wrap" href="#">
-										<div class="img-wrap-center"> <img src="img/prod-7.jpg" alt="" loading="lazy"/>
-										</div>
-									</a>
-									<div class="product-item__caption">
-										<div class="product-item__title">
-										</div>
-										<div class="product-item__text">
-										</div>
-										<div class="product-item__price">
-										</div>
-										<a class="product-item__btn" href="#">
-										</a>
-									</div>
-								</article>
-								<!-- /.product-item-->
-							</div>
-							<div class="sCatalog__col col-3">
-								<article class="product-item">
-									<a class="product-item__img-wrap" href="#">
-										<div class="img-wrap-center"> <img src="img/prod-8.jpg" alt="" loading="lazy"/>
-										</div>
-									</a>
-									<div class="product-item__caption">
-										<div class="product-item__title">
-										</div>
-										<div class="product-item__text">
-										</div>
-										<div class="product-item__price">
-										</div>
-										<a class="product-item__btn" href="#">
-										</a>
-									</div>
-								</article>
-								<!-- /.product-item-->
-							</div>
-						</div>
-					</div>
-				</div>
-				<!-- end sCatalog-->
-				<!-- start sForm-->
-				<section class="sForm section" id="sForm">
-					<div class="container">
-						<div class="section-title text-center">
-							<h2>sForm</h2>
-						</div>
-						<div class="sForm__row row">
-						</div>
-						<div class="form-wrap">
-							<form>
-								<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="" type="text" placeholder=""/>
-								</div>
-								<!-- +e.input-wrap-->
-								<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="" type="text" placeholder=""/>
-								</div>
-								<!-- +e.input-wrap-->
-								<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="" type="text" placeholder=""/>
-								</div>
-								<!-- +e.input-wrap-->
-							</form>
+							<h1>Main Title</h1>
+							<p>— We’re a full-service interior design studio who specialise in simple and timeless spaces.</p>
 						</div>
 					</div>
 				</section>
-				<!-- end sForm-->
-				<!-- start sContact-->
-				<section class="sContact section" id="sContact">
+				<!-- end headerBlock-->
+				<!-- start sServices-->
+				<section class="sServices section" id="Services">
 					<div class="container">
 						<div class="section-title text-center">
-							<h2>sContact</h2>
+							<h2 class="headline">Our Services</h2>
+							<div class="section-title__title">We’re here every step of the way
+							</div>
+							<p>We pride ourselves on our ability to challenge core assumptions, unpick legacy behaviors, streamline complex processes, and strike a balance between great design and functional development.</p>
 						</div>
-						<div class="sContact__row row">
+						<div class="sServices__row row">
+							<div class="col-md-6">
+								<div class="sServices__title">Connect with customers
+								</div>
+								<div class="sServices__descr">Solve a problem or close a sale in real-time with chat. If no one is available, customers are seamlessly routed to email without confusion.
+								</div>
+							</div>
+							<div class="col-md-6">
+								<div class="sServices__title">Connect the tools you already use
+								</div>
+								<div class="sServices__descr">Explore 100+ integrations that make your day-to-day workflow more efficient and familiar. Plus, our extensive developer tools.
+								</div>
+							</div>
+							<div class="col-md-6">
+								<div class="sServices__title">Our people make the difference
+								</div>
+								<div class="sServices__descr">We’re an extension of your customer service team, and all of our resources are free. Chat to our friendly team 24/7 when you need help.
+								</div>
+							</div>
+							<div class="col-md-6">
+								<div class="sServices__title">Our people make the difference
+								</div>
+								<div class="sServices__descr">We’re an extension of your customer service team, and all of our resources are free. Chat to our friendly team 24/7 when you need help.
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<!-- end sServices-->
+				<!-- start sAbout-->
+				<section class="sAbout section" id="About">
+					<div class="container">
+						<div class="sAbout__row row">
+							<div class="sAbout__col sAbout__col--txt col-lg-6">
+								<div class="section-title">
+									<h2 class="headline">About Us</h2>
+									<div class="section-title__title">Design that influences how people work, learn, live and experience the world.
+									</div>
+									<p>
+										Dolor enim eu tortor urna sed duis nulla. Aliquam vestibulum, nulla odio nisl vitae. In aliquet pellentesque aenean hac vestibulum turpis mi
+										<a href="#">bibendum diam</a>. Tempor integer aliquam in vitae malesuada fringilla.
+									</p>
+									<p>Elit nisi in eleifend sed nisi. Pulvinar at orci, proin imperdiet commodo consectetur convallis risus. Sed condimentum enim dignissim adipiscing faucibus consequat, urna. Viverra purus et erat auctor aliquam. Risus, volutpat vulputate posuere purus sit congue convallis aliquet.</p>
+									<p>Ipsum sit mattis nulla quam nulla. Gravida id gravida ac enim mauris id. Non pellentesque congue eget consectetur turpis. Sapien, dictum molestie sem tempor. Diam elit, orci, tincidunt aenean.</p>
+								</div>
+							</div>
+							<div class="sAbout__col sAbout__col--img col-lg-6">
+								<div class="sAbout__img"><img loading="lazy" src="img/@2x/sample.jpg" alt=""/>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<!-- end sAbout-->
+				<!-- start sContact-->
+				<section class="sContact section" id="Contact">
+					<div class="container">
+						<div class="sContact__row row align-items-center">
+							<div class="col-lg-6">
+								<div class="section-title">
+									<h2 class="headline">Contact us</h2>
+									<div class="section-title__title">Chat to our friendly team
+									</div>
+									<p>We’d love to hear from you! Please get in touch.</p>
+								</div>
+							</div>
+							<div class="col-lg-6">
+								<div class="sContact__item">
+									<div class="sContact__i-row row">
+										<div class="col-auto">
+											<div class="sContact__icon"><img class="img-svg-js" src="img/svg/location.svg"/>
+											</div>
+										</div>
+										<div class="col">
+											<div class="sContact__title">Melbourne
+											</div>
+											<div class="sContact__descr">100 Flinders Street, Melbourne VIC 3000 AU
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="sContact__item">
+									<div class="sContact__i-row row">
+										<div class="col-auto">
+											<div class="sContact__icon"><img class="img-svg-js" src="img/svg/phone.svg"/>
+											</div>
+										</div>
+										<div class="col">
+											<div class="sContact__title">Mobile Number
+											</div>
+											<a class="sContact__descr" href="tel:+380973191609">+380973191609
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
 						</div>
 					</div>
 				</section>
 				<!-- end sContact-->
+				<!-- start sForm-->
+				<div class="sForm section" id="sForm">
+					<div class="sForm__box-bg d-none d-sm-block"><img loading="lazy" src="img/@2x/ContactSample.png" alt=""/>
+					</div>
+					<div class="container">
+						<div class="form-wrap">
+							<form>
+								<div class="section-title">
+									<div class="form-wrap__headline">Contact US
+									</div>
+									<div class="form-wrap__descr">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio
+									</div>
+								</div>
+								<div class="form-wrap__inputs">
+									<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="name" type="text" placeholder="Name"/>
+									</div>
+									<!-- +e.input-wrap-->
+									<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="email" type="email" placeholder="E-mail"/>
+									</div>
+									<!-- +e.input-wrap-->
+								</div>
+								<button class="form-wrap__btn" type="submit">Get in Touch
+								</button>
+							</form>
+						</div>
+					</div>
+				</div>
+				<!-- end sForm-->
 			</main>
-			<footer class="footer section">
+			<footer class="footer">
 				<div class="container">
-					<div class="row">
-						<div class="col"></div>
-						<div class="col">Footer</div>
-						<div class="col"></div>
-						<div class="col-auto"></div>
+					<nav>
+						<ul class="menu">
+							<li class="menu-item"><a href="#Home">Home</a></li>
+							<li class="menu-item"><a href="#Services">Services</a></li>
+							<li class="menu-item"><a href="#About">About</a></li>
+							<li class="menu-item"><a href="#Contact">Contact Us</a></li>
+						</ul>
+					</nav>
+					<div class="footer__all-rights text-center">
+						©
+						<span class="curr-year-js">2077</span>
+						[Company Name]. All rights reserved.
 					</div>
 				</div>
 			</footer>
 		</div>
-		<!--  start modals--><a class="link-modal-js" href="modal-call">modal-call </a>
-		<div id="modal-call" style="display: none">
-			<div class="modal-win">
-				<div class="form-wrap">
-					<form>
-						<div class="text-center">
-							<div class="form-wrap__title form-data h3 ttu">Обратный звонок
-							</div>
-							<p class="after-headline">Заполните заявку и&nbsp;мы&nbsp;с&nbsp;Вами свяжемся в&nbsp;течение 15&nbsp;минут</p>
-						</div>
-						<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="text" type="text" placeholder="Ваше Имя" required="required"/> 
-						</div>
-						<!-- +e.input-wrap-->
-						<button class="form-wrap__btn btn" type="submit"> 
-						</button>
-						<div class="form-wrap__policy">
-							<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox" checked="checked"/><small class="custom-input__text text-secondary">Согласен на обработку и хранение моих персональных данных в соответствии с условиями</small>
-							</label>
-						</div>
-					</form>
-				</div>
-			</div>
-		</div>
-		<!-- #modal-call-->
-		<!-- end modals-->
 		<script src="libs/jquery/jquery.min.js"></script>
 		<script src="libs/@fancyapps/ui/fancybox.umd.js"> </script>
 		<script src="libs/swiper/swiper-bundle.min.js"> </script>

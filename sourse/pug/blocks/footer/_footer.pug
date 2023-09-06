@@ -1,9 +1,10 @@
 mixin footer()
-	+b.FOOTER.footer.section
+	+b.FOOTER.footer
 		.container
-			.row
-				.col
-					
-				.col Footer
-				.col
-				.col-auto
+			+mnu()
+			+e.all-rights.text-center
+				| ©
+				|
+				span.curr-year-js 2077
+				|
+				| [Company Name]. All rights reserved.
