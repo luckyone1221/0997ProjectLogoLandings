@@ -628,7 +628,8 @@ iframe {
 	}
 }
 
-.template2{
+.template2,
+.template3{
 	@include media-breakpoint-up(xxl){
 		.container{
 			max-width: 1310px!important;

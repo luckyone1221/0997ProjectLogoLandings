@@ -1,0 +1,41 @@
+extends ../layout/main.pug
+
+include ../blocks/header/_header.pug
+include ../blocks/topLine/_topLine.pug
+include ../blocks/top-nav/_top-nav.pug
+include ../blocks/headerBlock/_headerBlock.pug
+include ../blocks/headerBlock2/_headerBlock2.pug
+include ../blocks/headerBlock3/_headerBlock3.pug
+include ../blocks/sServices2/_sServices2.pug
+include ../blocks/sForm/_sForm.pug
+include ../blocks/sMore/_sMore.pug
+include ../blocks/sMore3/_sMore3.pug
+include ../blocks/sContent/_sContent.pug
+
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sForm/_sForm.pug
+include ../blocks/sForm3/_sForm3.pug
+include ../blocks/sCatalog/_sCatalog.pug
+
+include ../blocks/sServices/_sServices.pug
+include ../blocks/sAbout/_sAbout.pug
+include ../blocks/footer/_footer.pug
+
+block variables
+	- let  mainPage= 'template3'
+	- let  bg= "template3.png"
+
+block title
+	- let  title= index.head.title
+	title= title
+block pagecontent
+	+header({})
+		+top-nav2({})
+	+mob-mnu({})
+	main
+		+headerBlock3({})
+		+sServices3({})
+		+sMore3({})
+		+sContact2({})
+		+sForm3({})
+	+footer({})

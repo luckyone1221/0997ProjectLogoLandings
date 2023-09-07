@@ -50,6 +50,15 @@
 			--bs-gutter-x: #{rem(44)};
 		}
 	}
+	&__col{
+		@include media-breakpoint-up(lg){
+			min-width: 160px;
+		}
+
+		&--btn{
+			text-align: right;
+		}
+	}
 	&__btn{
 		@extend .btn;
 		@extend .btn-primary;
@@ -58,6 +67,12 @@
 		font-size: rem(14);
 		font-weight: 500;
 		line-height: calc(20/14);
+
+		&--alt{
+			border-radius: 8px;
+			font-size: 16px;
+			padding: rem(10) rem(17);
+		}
 	}
 	&__{}
 }

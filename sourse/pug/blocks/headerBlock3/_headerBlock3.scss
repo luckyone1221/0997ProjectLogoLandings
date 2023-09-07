@@ -1,0 +1,64 @@
+// start .headerBlock3
+.headerBlock3 {
+	--sPT: #{rem(60)};
+	@include media-breakpoint-up(sm){
+		--sPT: #{rem(75)};
+	}
+	@include media-breakpoint-up(lg){
+		--sPT: #{rem(90)};
+	}
+	@include media-breakpoint-up(xxl){
+		--sPT: #{rem(144)};
+		--sTPB: #{rem(88)};
+		--sPB: #{rem(90)};
+	}
+
+	.section-title{
+		h1{
+			color: $dark;
+			@include media-breakpoint-up(sm){
+				font-size: rem(64);
+			}
+			@include media-breakpoint-up(xxl){
+				font-size: 68px;
+				margin-bottom: rem(21);
+			}
+			font-weight: 600;
+			line-height: 1.5;
+			margin-bottom: rem(25);
+		}
+		p{
+			margin: 0 auto rem(25);
+			max-width: rem(806);
+			color: $gray;
+
+			@include media-breakpoint-up(sm){
+				font-size: rem(21);
+				line-height: 1.45;
+			}
+		}
+		&__btn{
+			@extend .btn;
+			@extend .btn-primary;
+
+			padding: rem(14) rem(40);
+			font-size: rem(19);
+			font-weight: 700;
+			line-height: 1.3;
+		}
+	}
+	
+	&__img{
+		@extend .accept-ratio-frame;
+		@include media-breakpoint-down(sm){
+			@include tear(100vw);
+		}
+
+		padding-top: calc(9/16 * 100%);
+		@include media-breakpoint-up(lg){
+			padding-top: calc(613/1280 * 100%);
+		}
+	}
+	&__{}
+	&__{}
+} // end.headerBlock3

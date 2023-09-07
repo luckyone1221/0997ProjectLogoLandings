@@ -16,3 +16,22 @@ mixin sServices2Item(title, descr)
 		+e.item
 			+e.H4.title=title
 			+e.descr=descr
+			
+			
+mixin sServices3(data)
+	// start sServices2
+	+b.SECTION.sServices2--template3.section#sServices2&attributes(attributes)
+		.container
+			+b.section-title
+				h2 Our Services
+			+e.row.row
+				+sServices3Item('Share team inboxes', 'Whether you have a team of 2 or 200, our shared team inboxes keep everyone on the same page and in the loop.')
+				+sServices3Item('Deliver instant answers', 'An all-in-one customer service platform that helps you balance everything your customers need to be happy.')
+				+sServices3Item('Manage your team', 'Measure what matters with Untitled’s easy-to-use reports. You can filter, export, and drilldown on the data.')
+				+sServices3Item('Connect with customers', 'Solve a problem or close a sale in real-time with chat. If no one is available, customers are seamlessly routed to email.')
+				
+mixin sServices3Item(title, descr)
+	.col-sm-6
+		+e.item--template3
+			+e.H4.title=title
+			+e.descr=descr

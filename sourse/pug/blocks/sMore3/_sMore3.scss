@@ -1,0 +1,156 @@
+// start .sMore
+.sMore3 {
+	@include media-breakpoint-up(lg){
+		min-height: 771.8px;
+	}
+
+	@include media-breakpoint-up(xxl){
+		--sPT: #{rem(88)};
+		--sPB: #{rem(40px)};
+		--sTPB: #{rem(24)};
+	}
+
+	&__box{
+		position: relative;
+		--l-col-w: calc(5/12 * 100%);
+		@include media-breakpoint-up(xxl){
+			--l-col-w: 45%;
+		}
+
+		@include media-breakpoint-up(lg){
+			padding-left: calc(var(--l-col-w) + #{rem(60)});
+		}
+		@include media-breakpoint-up(xxl){
+			padding-left: calc(var(--l-col-w) + #{rem(80)});
+		}
+	}
+	&__img-box{
+		position: relative;
+		margin-bottom: rem(32);
+		@include media-breakpoint-up(lg){
+			margin-bottom: 0;
+			position: absolute;
+			z-index: 1;
+			left: 0;
+			top: 0;
+			width: var(--l-col-w);
+		}
+	}
+
+
+	&__img-row{
+		--bs-gutter-x: #{rem(16)};
+		--bs-gutter-y: #{rem(16)};
+	}
+	&__col{
+		display: flex;
+		flex-direction: column;
+		align-items: stretch;
+
+		&--flex-end{
+			justify-content: flex-end;
+		}
+
+		&--small{
+			max-width: 29.73%!important;
+		}
+		&--long{
+
+		}
+	}
+	&__img{
+		@extend .accept-ratio-frame;
+
+		&--1{
+			padding-top: 100%;
+		}
+		&--2{
+			padding-top: calc(240/160*100%);
+		}
+		&--3{
+			padding-top: calc(128/192*100%);
+		}
+	}
+	&__dots{
+		& > *{
+			width: rem(79);
+			circle{
+				fill: $secondary;
+			}
+		}
+	}
+	//
+	.section-title{
+		@include media-breakpoint-up(lg){
+			max-width: rem(384);
+		}
+		h2{
+			@include media-breakpoint-up(xxl){
+				font-size: rem(37.5);
+				margin-bottom: rem(24);
+			}
+		}
+	}
+	&__txt{
+		margin-bottom: rem(48);
+		@include media-breakpoint-up(lg){
+			margin-bottom: rem(24);
+		}
+
+		span{
+			display: inline;
+			line-height: calc(30/18);
+			@include media-breakpoint-up(xl){
+				display: inline-block;
+				line-height: calc(22/18);
+			}
+			margin-bottom: rem(8);
+			&:last-child{
+				margin-bottom: 0;
+			}
+
+			font-size: rem(18);
+			color: $white;
+			background-color: $primary;
+		}
+	}
+	&__lower-txt{
+		p{
+			color: $dark;
+			font-size: rem(21.3);
+			line-height: 1.2;
+			font-weight: 400;
+			margin-bottom: rem(24);
+		}
+
+		ul{
+			list-style: none;
+			padding: 0;
+			margin: 0 0 rem(24);
+
+			li{
+				display: flex;
+				//align-items: center;
+				&:before{
+					content: '';
+					flex-shrink: 0;
+					display: block;
+					width: 6px;
+					height: 6px;
+					border-radius: 6px;
+					background-color: $dark;
+					margin: rem(10) rem(12);
+				}
+
+				color: $dark;
+				font-size: rem(21.25);
+				line-height: 1.4;
+				margin-bottom: rem(24);
+			}
+
+
+		}
+	}
+	&__{}
+	&__{}
+} // end.sMore
