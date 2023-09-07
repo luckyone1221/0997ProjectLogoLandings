@@ -211,8 +211,55 @@
 				<!-- start sForm3-->
 				<section class="sForm3 section" id="sForm3">
 					<div class="container">
-						<div class="section-title text-center">
-							<h2>sForm3</h2>
+						<div class="sForm3__row row">
+							<div class="sForm3__col sForm3__col--left col-lg-6">
+								<div class="sForm3__form-box">
+									<div class="section-title">
+										<h2>Contact us</h2>
+										<p>Our friendly team would love to hear from you.</p>
+									</div>
+									<div class="form-wrap">
+										<form>
+											<div class="form-wrap__row row">
+												<div class="col-sm-6">
+													<div class="form-wrap__input-wrap form-group">
+														<label><span class="form-wrap__input-title">First name</span><input class="form-wrap__input form-control" name="firstName" type="text" placeholder="First name"/>
+														</label>
+													</div>
+													<!-- +e.input-wrap-->
+												</div>
+												<div class="col-sm-6">
+													<div class="form-wrap__input-wrap form-group">
+														<label><span class="form-wrap__input-title">Last name</span><input class="form-wrap__input form-control" name="lastName" type="text" placeholder="Last name"/>
+														</label>
+													</div>
+													<!-- +e.input-wrap-->
+												</div>
+												<div class="col-12">
+													<div class="form-wrap__input-wrap form-group">
+														<label><span class="form-wrap__input-title">Email</span><input class="form-wrap__input form-control" name="email" type="text" placeholder="you@company.com"/>
+														</label>
+													</div>
+													<!-- +e.input-wrap-->
+												</div>
+												<div class="col-12">
+													<div class="form-wrap__input-wrap form-group">
+														<label><span class="form-wrap__input-title">Message</span><textarea class="form-wrap__input form-control" name="message" placeholder="Leave us a message..."></textarea>
+														</label>
+													</div>
+													<!-- +e.input-wrap-->
+												</div>
+											</div>
+											<button class="form-wrap__btn" type="submit">Send message
+											</button>
+										</form>
+									</div>
+								</div>
+							</div>
+							<div class="sForm3__col sForm3__col--right col-lg-6 d-none d-lg-block">
+								<div class="sForm3__img"><img loading="lazy" src="img/@2x/sample.jpg" alt=""/>
+								</div>
+							</div>
 						</div>
 					</div>
 				</section>
@@ -236,6 +283,17 @@
 				</div>
 			</footer>
 		</div>
+		<!--a(href="modal-thanks").link-modal-js modal-call-->
+		<div id="modal-thanks" style="display: none">
+			<div class="modal-win">
+				<div class="text-center">
+					<h4>Thanks for your application</h4>
+					<p>We will contact you back</p>
+				</div>
+			</div>
+		</div>
+		<!-- #modal-call-->
+		<!-- end modals-->
 		<script src="libs/jquery/jquery.min.js"></script>
 		<script src="libs/@fancyapps/ui/fancybox.umd.js"> </script>
 		<script src="libs/swiper/swiper-bundle.min.js"> </script>

@@ -1,10 +1,123 @@
 // start .sForm3
 .sForm3 {
-	// --sPT: #{rem(0)};
-	// --sPB: #{rem(0)};
-	// --sTPB: #{rem(0)};
-	
-	&__{}
-	&__{}
+	 @include media-breakpoint-up(xxl){
+		 --sPT: #{rem(64)};
+		 --sPB: #{rem(64)};
+		 --sTPB: #{rem(46)};
+	 }
+
+	.container{
+		@include media-breakpoint-up(xxl){
+			max-width: 1264px!important;
+		}
+	}
+	&__row{
+		--bs-gutter-y: #{rem(32)};
+
+		--bs-gutter-x: #{rem(40)};
+		@include media-breakpoint-up(xl){
+			--bs-gutter-x: #{rem(48)};
+		}
+	}
+	&__col{
+		--right-col-w: #{rem(576)};
+
+		&--left{
+			@include media-breakpoint-up(xl){
+				width: calc(100% - var(--right-col-w) - var(--bs-gutter-x))!important;
+			}
+		}
+		&--right{
+			@include media-breakpoint-up(lg){
+				display: flex;
+				flex-direction: column;
+				align-items: stretch;
+			}
+
+			@include media-breakpoint-up(xl){
+				width: calc(var(--right-col-w) + var(--bs-gutter-x))!important;
+			}
+		}
+	}
+	&__form-box{
+		@include media-breakpoint-up(xl){
+			max-width: 480px;
+			margin: 0 auto;
+		}
+
+		@include media-breakpoint-up(xxl){
+			position: relative;
+			left: -8px;
+		}
+	}
+	.section-title{
+		h2{
+			@include media-breakpoint-up(sm){
+				font-size: rem(38);
+				line-height: calc(44/36);
+			}
+
+			font-weight: 600;
+
+			margin-bottom: rem(18);
+		}
+
+		p{
+			font-size: rem(21.3);
+		}
+	}
+	.form-wrap{
+		&__row{
+			--bs-gutter-x: #{rem(32)};
+			--bs-gutter-y: #{rem(24)};
+
+			margin-bottom: rem(32);
+		}
+		&__input-wrap{
+
+			label{
+
+			}
+			textarea{
+				height: rem(134);
+			}
+		}
+		&__input-title{
+			display: block;
+			color: $gray;
+			font-size: rem(15);
+			font-weight: 500;
+			line-height: calc(20/14);
+
+			margin-bottom: rem(4);
+		}
+		&__input{
+			padding: rem(9) rem(14);
+			line-height: 1.5;
+		}
+		&__btn{
+			@extend .btn;
+			@extend .btn-primary;
+
+			width: 100%;
+			padding: rem(12) rem(20);
+
+			color: $white;
+			font-size: rem(16);
+			font-weight: 500;
+			line-height: 1.5;
+		}
+		&__{}
+	}
+
+	//
+	&__img{
+		flex-grow: 1;
+		@extend .accept-ratio-frame;
+		padding-top: calc(570/576*100%);
+		img{
+
+		}
+	}
 	&__{}
 } // end.sForm3

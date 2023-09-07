@@ -7,13 +7,12 @@
 	max-width: 100%;
 }
 .modal-win {
-	// display: block;
 	background-color: #fff;
 	max-width: 100%;
 	position: relative;
-	width: rem(1500);
-	// min-height: 100%; 
-	padding: 40px;
+	width: rem(480);
+	padding: rem(32) rem(24);
+	border-radius: rem(16);
 
 	.modal-content {
 		// max-width: 485px;

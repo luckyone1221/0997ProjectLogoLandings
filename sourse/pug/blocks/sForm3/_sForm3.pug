@@ -2,6 +2,24 @@ mixin sForm3(data)
 	// start sForm3
 	+b.SECTION.sForm3.section#sForm3&attributes(attributes)
 		.container
-			+b.section-title.text-center
-				h2 sForm3
+			+e.row.row
+				+e.col--left.col-lg-6
+					+e.form-box
+						+b.section-title
+							h2 Contact us
+							p Our friendly team would love to hear from you.
+						+form-wrap()
+							+e.row.row
+								.col-sm-6
+									+input('First name', 'text', 'First name', 'firstName')
+								.col-sm-6
+									+input('Last name', 'text', 'Last name', 'lastName')
+								.col-12
+									+input('you@company.com', 'text', 'Email', 'email')
+								.col-12
+									+input('Leave us a message...', 'textarea', 'Message', 'message')
+							+e.btn(type="submit") Send message
+				+e.col--right.col-lg-6.d-none.d-lg-block
+					+e.img
+						img(loading="lazy" src="img/@2x/sample.jpg" alt="")
 	// end sForm3

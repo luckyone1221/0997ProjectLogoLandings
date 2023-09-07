@@ -12,7 +12,7 @@ $mail->CharSet = 'utf-8';
 ///who send 
 $mail->setFrom('info@info.com','info info');
 
- $mail->addAddress('wol1414@gmail.com');
+$mail->addAddress('wol1414@gmail.com');
  // $mail->addAddress('horenkova369@gmail.com');
 // $mail->addAddress('stab@inbox.support');
 
@@ -25,13 +25,19 @@ $time = date('d.m.Y в H:i');
 $html = '
 
 <table style="width: 100%;">';
-    if (!empty($_POST['order'])) {
-        $html .= ' <tr style="background-color: #f8f8f8;">  <td style="padding: 10px; border: #e9e9e9 1px solid;">Вид формы:</td>   <td style="padding: 10px; border: #e9e9e9 1px solid;">' . $_POST['order'] . '</b></td></tr>';
-    }
-
+    //only 1 input for name
     if (!empty($_POST['name'])) {
         $html .= ' <tr style="background-color: #f8f8f8;"> <td style="padding: 10px; border: #e9e9e9 1px solid;">Name:</td>   <td style="padding: 10px; border: #e9e9e9 1px solid;">' . $_POST['name'] . '</b></td></tr>';
     }
+
+    //splitted inputs for name and surname
+    if (!empty($_POST['firstName'])) {
+        $html .= ' <tr style="background-color: #f8f8f8;"> <td style="padding: 10px; border: #e9e9e9 1px solid;">First Name:</td>   <td style="padding: 10px; border: #e9e9e9 1px solid;">' . $_POST['firstName'] . '</b></td></tr>';
+    }
+    if (!empty($_POST['name'])) {
+        $html .= ' <tr style="background-color: #f8f8f8;"> <td style="padding: 10px; border: #e9e9e9 1px solid;">Last Name:</td>   <td style="padding: 10px; border: #e9e9e9 1px solid;">' . $_POST['lastName'] . '</b></td></tr>';
+    }
+
     
     if (!empty($_POST['tel'])) {
         $html .= ' <tr style="background-color: #f8f8f8;"> <td style="padding: 10px; border: #e9e9e9 1px solid;"> Телефон:</td>   <td style="padding: 10px; border: #e9e9e9 1px solid;">' . $_POST['tel'] . '</b></td></tr>';
@@ -45,29 +51,11 @@ $html = '
         $html .= ' <tr style="background-color: #f8f8f8;"> <td style="padding: 10px; border: #e9e9e9 1px solid;"> Вопрос:</td>   <td style="padding: 10px; border: #e9e9e9 1px solid;">' . $_POST['text'] . '</b></td>';
     }
 
-    if (!empty($_POST['comment'])) {
-        $html .= ' <tr style="background-color: #f8f8f8;"> <td style="padding: 10px; border: #e9e9e9 1px solid;"> Отзыв:</td>   <td style="padding: 10px; border: #e9e9e9 1px solid;">' . $_POST['comment'] . '</b></td>';
+    if (!empty($_POST['message'])) {
+        $html .= ' <tr style="background-color: #f8f8f8;"> <td style="padding: 10px; border: #e9e9e9 1px solid;"> Message:</td>   <td style="padding: 10px; border: #e9e9e9 1px solid;">' . $_POST['message'] . '</b></td>';
     }
 
-    // if (!empty($_POST['tech'])) {
-    //     $html .= ' <tr style="background-color: #f8f8f8;">  <td style="padding: 10px; border: #e9e9e9 1px solid;"> Техника:</td>   <td style="padding: 10px; border: #e9e9e9 1px solid;">' . implode(", ",$_POST['tech']) . '</b></td></tr>';
-    // }
-
-    if (!empty($_POST['utm_source'])) {
-        $html .= ' <tr style="background-color: #f8f8f8;"> <td style="padding: 10px; border: #e9e9e9 1px solid;"> utm_source:</td>   <td style="padding: 10px; border: #e9e9e9 1px solid;">' . $_POST['utm_source'] . '</b></td>';
-    }
-    
-    if (!empty($_POST['utm_term'])) {
-        $html .= ' <tr style="background-color: #f8f8f8;"> <td style="padding: 10px; border: #e9e9e9 1px solid;"> utm_term:</td>   <td style="padding: 10px; border: #e9e9e9 1px solid;">' . $_POST['utm_term'] . '</b></td>';
-    }    
-    if (!empty($_POST['utm_medium'])) {
-        $html .= ' <tr style="background-color: #f8f8f8;"> <td style="padding: 10px; border: #e9e9e9 1px solid;"> utm_medium:</td>   <td style="padding: 10px; border: #e9e9e9 1px solid;">' . $_POST['utm_medium'] . '</b></td>';
-    }  
-      
-    if (!empty($_POST['utm_campaign'])) {
-        $html .= ' <tr style="background-color: #f8f8f8;"> <td style="padding: 10px; border: #e9e9e9 1px solid;"> utm_campaign:</td>   <td style="padding: 10px; border: #e9e9e9 1px solid;">' . $_POST['utm_campaign'] . '</b></td>';
-    }
-     $html .= ' <tr style="background-color: #f8f8f8;"> <td style="padding: 10px; border: #e9e9e9 1px solid;">  Время отправки:</td>   <td style="padding: 10px; border: #e9e9e9 1px solid;">' . $time . '</b></td>
+     $html .= '<tr style="background-color: #f8f8f8;"> <td style="padding: 10px; border: #e9e9e9 1px solid;">  Time of sending:</td>   <td style="padding: 10px; border: #e9e9e9 1px solid;">' . $time . '</b></td>
       <tr style="background-color: #f8f8f8;"> <td style="padding: 10px; border: #e9e9e9 1px solid;"> IP:</td>   <td style="padding: 10px; border: #e9e9e9 1px solid;">' . $_SERVER['REMOTE_ADDR'] . '</b></td> 
 </table>
 ';
