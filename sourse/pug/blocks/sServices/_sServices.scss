@@ -32,11 +32,13 @@
 	&__title{
 		color: $dark;
 		font-size: rem(20);
+		letter-spacing: rem(0.7);
 		font-weight: 500;
 		margin-bottom: rem(8);
 	}
 	&__descr{
 		color: $gray;
+		letter-spacing: rem(0.45);
 	}
 	&__{}
 	&__{}

@@ -1,0 +1,47 @@
+mixin sMore(data)
+	// start sMore
+	+b.SECTION.sMore.section#sMore&attributes(attributes)
+		.container
+			+e.box
+				+b.section-title
+					h2 We’re more than an&nbsp;agency.
+				+e.txt
+					span
+						| Lorem ipsum dolor sit amet consectetur. Semper ut ultricies
+						|
+					br.d-none.d-xxl-block
+					span
+						| ultrices adipiscing. Nibh risus mauris adipiscing aliquam turpis.
+						|
+					br.d-none.d-xxl-block
+					span Vel sed iaculis sed augue.
+				+e.img-box
+					+e.rim
+						img.img-svg-js(loading="lazy" src="img/svg/sMore-bg.svg" alt="")
+					+e.img-row.row
+						.col-6
+							+sMoreImg(1)
+							+sMoreImg(2)
+						.col-6
+							+sMoreImg(3)
+							+sMoreImg(4)
+					+e.dots.d-none.d-lg-block
+						img.img-svg-js(loading="lazy" src="img/svg/sMore-dots.svg" alt="")
+				+e.lower-txt
+					p Lorem ipsum dolor sit amet consectetur remper ut:
+					ul
+						li Lorem ipsum dolor sit amet consectetur remper utLorem ipsum dolor sit amet consectetur remper ut Lorem ipsum dolor sit amet consectetur remper utLorem ipsum dolor sit amet consectetur remper ut
+						li Lorem ipsum dolor sit amet consectetur remper utLorem ipsum dolor sit amet consectetur remper ut Lorem ipsum dolor sit amet consectetur remper utLorem ipsum dolor sit amet consectetur remper ut
+						li Lorem ipsum dolor sit amet consectetur remper utLorem ipsum dolor sit amet consectetur remper ut Lorem ipsum dolor sit amet consectetur remper utLorem ipsum dolor sit amet consectetur remper ut
+
+				//-+sMoreBtn('#')
+	// end sMore
+
+mixin sMoreImg(imgNum)
+	+e.img
+		img(loading="lazy" src=`img/@2x/sample.jpg` alt="")
+
+mixin sMoreBtn(href="#")
+	+b.txt-btn&attributes(attributes)
+		span Click here to learn mo
+		span re

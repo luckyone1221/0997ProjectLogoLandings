@@ -7,7 +7,7 @@
 		h1{
 			@include media-breakpoint-up(md){
 				font-size: rem(60);
-				letter-spacing: rem(-1.2);
+				//letter-spacing: rem(-1.2);
 			}
 
 			margin-bottom: rem(24);
@@ -19,6 +19,7 @@
 			max-width: 480px;
 			color: $gray;
 			font-size: rem(20);
+			letter-spacing: rem(0.5);
 		}
 	}
 	&__{}

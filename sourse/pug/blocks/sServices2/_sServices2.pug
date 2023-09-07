@@ -1,0 +1,18 @@
+mixin sServices2(data)
+	// start sServices2
+	+b.SECTION.sServices2.section#sServices2&attributes(attributes)
+		.container
+			+b.section-title
+				h2 Our Services
+			+e.row.row
+				+sServices2Item('Share team inboxes', 'Whether you have a team of 2 or 200, our shared team inboxes keep everyone on the same page and in the loop.')
+				+sServices2Item('Deliver instant answers', 'An all-in-one customer service platform that helps you balance everything your customers need to be happy.')
+				+sServices2Item('Manage your team', 'Measure what matters with Untitled’s easy-to-use reports. You can filter, export, and drilldown on the data.')
+				+sServices2Item('Connect with customers', 'Solve a problem or close a sale in real-time with chat. If no one is available, customers are seamlessly routed to email.')
+	// end sServices2
+
+mixin sServices2Item(title, descr)
+	.col-sm-6.col-xl-3
+		+e.item
+			+e.H4.title=title
+			+e.descr=descr

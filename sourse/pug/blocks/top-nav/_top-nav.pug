@@ -22,4 +22,19 @@ mixin top-nav()
 					+e.btn.anchor-js(href="#Contact") Contact Us
 				.col-auto.d-sm-none
 					+menu-toggle()
+
+mixin top-nav2()
+	// start top-nav
+	+b.top-nav.block-with-lazy
+		.container
+			+e.row.row.align-items-center
+				.col.col-sm-auto
+					+e.logo(href="/")
+						img(src="img/@2x/logo.png" alt="")
+				.col-auto.mx-auto.d-none.d-sm-block
+					+mnu()
+				.col-auto.d-none.d-sm-block
+					+e.btn.anchor-js(href="#Contact") Contact Us
+				.col-auto.d-sm-none
+					+menu-toggle()
 	// end top-nav

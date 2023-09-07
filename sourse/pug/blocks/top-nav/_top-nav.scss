@@ -1,7 +1,7 @@
 .top-nav {
 	padding: rem(16) 0;
 	@include media-breakpoint-up(xl){
-		padding: rem(24) 0;
+		padding: rem(20) 0;
 	}
 
 	&__logo{
@@ -25,6 +25,9 @@
 			@include media-breakpoint-up(lg){
 				margin-right: rem(32);
 			}
+			@include media-breakpoint-up(xxl){
+				margin-right: rem(35);
+			}
 			&:last-child{
 				margin-right: 0;
 			}
@@ -44,13 +47,14 @@
 	&__row{
 		--bs-gutter-x: #{rem(32)};
 		@include media-breakpoint-up(lg){
-			--bs-gutter-x: #{rem(40)};
+			--bs-gutter-x: #{rem(44)};
 		}
 	}
 	&__btn{
 		@extend .btn;
 		@extend .btn-primary;
 
+		//padding: 9px 18px;
 		font-size: rem(14);
 		font-weight: 500;
 		line-height: calc(20/14);

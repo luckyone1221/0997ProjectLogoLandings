@@ -1,6 +1,7 @@
-mixin sForm()
+mixin sForm(props)
 	// start sForm
-	+b.sForm.section#sForm&attributes(attributes)
+	- let {addClasses} = props
+	+b.sForm.section#sForm&attributes(attributes)(class=`${addClasses ? addClasses : ''}`)
 		+e.box-bg.d-none.d-sm-block
 			img(loading="lazy" src="img/@2x/ContactSample.png" alt="")
 		.container

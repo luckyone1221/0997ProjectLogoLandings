@@ -6,7 +6,9 @@
 	}
 
 	.section-title{
-
+		@include media-breakpoint-up(xxl){
+			padding-top: 6px;
+		}
 		&__title{
 			margin-bottom: rem(30);
 			@include media-breakpoint-up(xl){
@@ -20,9 +22,20 @@
 				font-size: rem(16);
 				line-height: 1.45;
 			}
+
+			@include media-breakpoint-up(xxl){
+				letter-spacing: .43px;
+			}
 			font-size: rem(18);
 			font-weight: 400;
 			line-height: calc(28/18);
+			margin-bottom: rem(18);
+			&:last-child{
+				margin-bottom: 0;
+				@include media-breakpoint-up(xxl){
+					margin-bottom: 6px;
+				}
+			}
 
 			a{
 				color: $gray;
